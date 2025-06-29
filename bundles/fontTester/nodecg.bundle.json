@@ -1,0 +1,16 @@
+{
+  "name": "fontTester",
+  "version": "1.0.0",
+  "description": "A NodeCG bundle to preview and test fonts.",
+  "nodecgDependency": ">=1.8.1",
+  "license": "MIT",
+  "dashboard": [
+    {
+      "name": "fontTester",
+      "title": "Font Tester",
+      "file": "dashboard/panel.html",
+      "width": 6,
+      "height": 8
+    }
+  ]
+}

@@ -127,7 +127,7 @@
     "cpy-cli": "^5.0.0",
     "cross-env": "^7.0.3",
     "del-cli": "^5.1.0",
-    "esbuild": "^0.19.12",
+    "esbuild": "^0.25.5",
     "esbuild-plugin-copy": "^2.1.1",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",

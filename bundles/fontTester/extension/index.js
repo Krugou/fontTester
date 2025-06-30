@@ -6,6 +6,12 @@ module.exports = function (nodecg) {
    nodecg.log.info('Visit https://nodecg.dev for full documentation.');
    nodecg.log.info('Good luck!');
 
-   // Declare the replicant for font selection
-   nodecg.Replicant('selectedFont', { defaultValue: 'FinlandicaText-Regular' });
+   // Declare replicants for fonts
+   nodecg.Replicant('selectedHeadingFont', { defaultValue: 'FinlandicaHeadline-Bold' });
+   nodecg.Replicant('selectedParagraphFont', { defaultValue: 'FinlandicaText-Regular' });
+
+   // Declare replicants for text content
+   nodecg.Replicant('headingText', { defaultValue: 'Business in Finland' });
+   nodecg.Replicant('subheadingText', { defaultValue: 'Opportunities and Innovation' });
+   nodecg.Replicant('paragraphText', { defaultValue: 'Finland is renowned for its stable economy, innovative technology sector, and high quality of life.<br>The business environment encourages entrepreneurship, sustainability, and global collaboration.<br>Companies benefit from a skilled workforce, transparent regulations, and strong support for research and development.' });
 };

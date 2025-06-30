@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
 	<meta charset="UTF-8" />
 	<!-- Tailwind CSS CDN -->
@@ -41,47 +40,147 @@
 			font-weight: normal;
 			font-style: normal;
 		}
+
+		@font-face {
+			font-family: 'FinlandicaText-Light';
+			src: url('../graphics/fonts/Finlandica3.0/FinlandicaText-Light.ttf') format('truetype');
+			font-weight: 300;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'FinlandicaText-Medium';
+			src: url('../graphics/fonts/Finlandica3.0/FinlandicaText-Medium.ttf') format('truetype');
+			font-weight: 500;
+			font-style: normal;
+		}
+
+		.font-section {
+			transition: all 0.2s ease-in-out;
+		}
+
+		.font-section:hover {
+			transform: translateY(-1px);
+		}
+
+		button {
+			transition: all 0.15s ease-in-out;
+		}
+
+		button:hover {
+			transform: translateY(-1px);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		}
 	</style>
 </head>
 
-
-
-
-<body class="bg-gray-50 min-h-screen flex flex-col items-center justify-center">
-	<div class="text-xs py-4 text-gray-500 mt-1">These buttons only change the font of headings and subheadings.</div>
-	<div class="mb-6">
-		<span class="font-semibold text-lg mr-4">Heading/Subheading Font:</span>
-		<div id="headingFontButtons" class="inline-flex gap-2">
-			<button
-				class="font-bold px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
-				data-font="FinlandicaHeadline-Bold">Headline Bold</button>
-			<button
-				class="font-normal px-4 py-2 rounded bg-green-600 text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400"
-				data-font="FinlandicaHeadline-Regular">Headline Regular</button>
-			<button
-				class="font-bold px-4 py-2 rounded bg-sky-600 text-white hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-400"
-				data-font="'Finlandica', sans-serif">Google Finlandica</button>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen py-8 px-4">
+	<div class="max-w-4xl mx-auto">
+		<!-- Header -->
+		<div class="text-center mb-12">
+			<h1 class="text-3xl font-bold text-gray-800 mb-2">Font Tester Dashboard</h1>
+			<p class="text-gray-600">Select fonts for different text elements in your graphics</p>
 		</div>
 
-	</div>
-	<div class="text-xs py-4 text-gray-500 mt-1">These buttons only change the font of paragraph text.</div>
-	<div class="mb-6">
-		<span class="font-semibold text-lg mr-4">Paragraph Text Font:</span>
-		<div id="paragraphFontButtons" class="inline-flex gap-2">
-			<button
-				class="font-normal px-4 py-2 rounded bg-purple-600 text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-400"
-				data-font="FinlandicaText-Regular">Text Regular</button>
-			<button
-				class="font-light px-4 py-2 rounded bg-pink-600 text-white hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-400"
-				data-font="FinlandicaText-Light">Text Light</button>
-			<button
-				class="font-medium px-4 py-2 rounded bg-yellow-600 text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-				data-font="FinlandicaText-Medium">Text Medium</button>
-			<button
-				class="font-normal px-4 py-2 rounded bg-sky-600 text-white hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-400"
-				data-font="'Finlandica', sans-serif">Google Finlandica</button>
+		<!-- Heading Font Section -->
+		<div class="font-section bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-200">
+			<div class="mb-6">
+				<h2 class="text-2xl font-bold text-gray-800 mb-2">Heading & Subheading Font</h2>
+				<p class="text-sm text-gray-500">Choose the font for titles, headings, and subheadings</p>
+			</div>
+			<div id="headingFontButtons" class="flex flex-wrap gap-3">
+				<button
+					class="font-bold px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200 shadow-md"
+					data-font="FinlandicaHeadline-Bold">
+					<span class="block text-sm font-medium">Headline Bold</span>
+					<span class="block text-xs opacity-75">Strong & Impactful</span>
+				</button>
+				<button
+					class="font-normal px-6 py-3 rounded-lg bg-green-600 text-white hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-200 shadow-md"
+					data-font="FinlandicaHeadline-Regular">
+					<span class="block text-sm font-medium">Headline Regular</span>
+					<span class="block text-xs opacity-75">Clean & Professional</span>
+				</button>
+				<button
+					class="font-bold px-6 py-3 rounded-lg bg-sky-600 text-white hover:bg-sky-700 focus:outline-none focus:ring-4 focus:ring-sky-200 shadow-md"
+					data-font="'Finlandica', sans-serif">
+					<span class="block text-sm font-medium">Google Finlandica</span>
+					<span class="block text-xs opacity-75">Web Optimized</span>
+				</button>
+			</div>
 		</div>
 
+		<!-- Paragraph Font Section -->
+		<div class="font-section bg-white rounded-xl shadow-lg p-8 border border-gray-200">
+			<div class="mb-6">
+				<h2 class="text-2xl font-bold text-gray-800 mb-2">Paragraph Text Font</h2>
+				<p class="text-sm text-gray-500">Choose the font for body text and descriptions</p>
+			</div>
+			<div id="paragraphFontButtons" class="flex flex-wrap gap-3">
+				<button
+					class="font-normal px-6 py-3 rounded-lg bg-purple-600 text-white hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-200 shadow-md"
+					data-font="FinlandicaText-Regular">
+					<span class="block text-sm font-medium">Text Regular</span>
+					<span class="block text-xs opacity-75">Standard Weight</span>
+				</button>
+				<button
+					class="font-light px-6 py-3 rounded-lg bg-pink-600 text-white hover:bg-pink-700 focus:outline-none focus:ring-4 focus:ring-pink-200 shadow-md"
+					data-font="FinlandicaText-Light">
+					<span class="block text-sm font-medium">Text Light</span>
+					<span class="block text-xs opacity-75">Subtle & Elegant</span>
+				</button>
+				<button
+					class="font-medium px-6 py-3 rounded-lg bg-yellow-600 text-white hover:bg-yellow-700 focus:outline-none focus:ring-4 focus:ring-yellow-200 shadow-md"
+					data-font="FinlandicaText-Medium">
+					<span class="block text-sm font-medium">Text Medium</span>
+					<span class="block text-xs opacity-75">Enhanced Readability</span>
+				</button>
+				<button
+					class="font-normal px-6 py-3 rounded-lg bg-sky-600 text-white hover:bg-sky-700 focus:outline-none focus:ring-4 focus:ring-sky-200 shadow-md"
+					data-font="'Finlandica', sans-serif">
+					<span class="block text-sm font-medium">Google Finlandica</span>
+					<span class="block text-xs opacity-75">Web Optimized</span>
+				</button>
+			</div>
+		</div>
+
+		<!-- Text Content Section -->
+		<div class="font-section bg-white rounded-xl shadow-lg p-8 mb-8 border border-gray-200">
+			<div class="mb-6">
+				<h2 class="text-2xl font-bold text-gray-800 mb-2">Text Content</h2>
+				<p class="text-sm text-gray-500">Edit the text content displayed in your graphics</p>
+			</div>
+			<div class="space-y-6">
+				<div class="flex justify-between items-center">
+					<button id="saveSettings"
+						class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 text-sm font-medium shadow-sm">
+						Save Settings
+					</button>
+					<button id="loadTestText"
+						class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 text-sm font-medium shadow-sm">
+						Load Test Text
+					</button>
+				</div>
+				<div>
+					<label for="headingTextInput" class="block text-sm font-medium text-gray-700 mb-2">Heading Text</label>
+					<input type="text" id="headingTextInput"
+						class="w-full px-4 py-3 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg font-semibold"
+						placeholder="Enter heading text...">
+				</div>
+				<div>
+					<label for="subheadingTextInput" class="block text-sm font-medium text-gray-700 mb-2">Subheading Text</label>
+					<input type="text" id="subheadingTextInput"
+						class="w-full px-4 py-3 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base font-medium"
+						placeholder="Enter subheading text...">
+				</div>
+				<div>
+					<label for="paragraphTextInput" class="block text-sm font-medium text-gray-700 mb-2">Paragraph Text</label>
+					<textarea id="paragraphTextInput" rows="4"
+						class="w-full px-4 py-3 text-black border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm resize-vertical"
+						placeholder="Enter paragraph text... (use line breaks for <br> tags)"></textarea>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script type="module" src="./panel.js"></script>

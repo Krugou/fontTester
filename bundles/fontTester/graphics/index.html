@@ -41,6 +41,20 @@
 			font-weight: normal;
 			font-style: normal;
 		}
+
+		@font-face {
+			font-family: 'FinlandicaText-Light';
+			src: url('./fonts/Finlandica3.0/FinlandicaText-Light.ttf') format('truetype');
+			font-weight: 300;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'FinlandicaText-Medium';
+			src: url('./fonts/Finlandica3.0/FinlandicaText-Medium.ttf') format('truetype');
+			font-weight: 500;
+			font-style: normal;
+		}
 	</style>
 	<script type="module" src="./index.js"></script>
 </head>
@@ -49,17 +63,20 @@
 <body class="bg-gray-50 min-h-screen flex flex-col items-center justify-center font-[FinlandicaText-Regular]">
 
 
-	<div id="fontSampleHeading" class="mt-8 text-5xl font-bold text-gray-800 text-center">
+	<div id="fontSampleHeading" class="mt-8 text-5xl font-bold text-gray-800 text-center"
+		style="font-family: FinlandicaHeadline-Bold;">
 		Business in Finland
 	</div>
-	<div id="fontSampleSubheading" class="mt-4 text-2xl font-semibold text-gray-700 text-center">
+	<div id="fontSampleSubheading" class="mt-4 text-2xl font-semibold text-gray-700 text-center"
+		style="font-family: FinlandicaHeadline-Bold;">
 		Opportunities and Innovation
 	</div>
-	<div id="fontSampleParagraph" class="mt-6 text-base text-gray-700 text-center max-w-2xl">
-		"Finland is renowned for its stable economy, innovative technology sector, and high quality of life.<br>
+	<div id="fontSampleParagraph" class="mt-6 text-base text-gray-700 text-center max-w-2xl"
+		style="font-family: FinlandicaText-Regular;">
+		Finland is renowned for its stable economy, innovative technology sector, and high quality of life.<br>
 		The business environment encourages entrepreneurship, sustainability, and global collaboration.<br>
 		Companies benefit from a skilled workforce, transparent regulations, and strong support for research and
-		development."
+		development.
 	</div>
 </body>
 

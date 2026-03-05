@@ -72,7 +72,7 @@
     "json-schema-to-typescript": "^15.0.3",
     "klona": "^2.0.6",
     "lodash": "^4.17.23",
-    "multer": "^2.1.0",
+    "multer": "^2.1.1",
     "nano-spawn": "^0.2.0",
     "nodecg": "^2.6.1",
     "npm-package-arg": "^12.0.1",
